@@ -4,9 +4,7 @@ import "fmt"
 
 func main() {
 
-	var n = 2
-
-	switch n {
+	switch n := 2; n {
 	case 1:
 		fmt.Println(1)
 	case 2:
