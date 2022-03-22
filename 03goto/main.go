@@ -16,8 +16,6 @@ func main() {
 	0 1
 	xxx
 	*/
-	return
-
 gotoTag:
-	fmt.Println("xxx")
+	fmt.Println("狂喊老弟")
 }
