@@ -34,7 +34,6 @@ func main() {
 	fmt.Println(a4)
 	fmt.Println(a5)
 	fmt.Printf("a5:len:%d,cap:%d", len(a5), cap(a5))
-
 	/**
 	s1:len:3,cap:3s2:len:3,cap:3[1 2]
 	[1 2 3 4 5]
@@ -42,5 +41,11 @@ func main() {
 	[1 2]
 	a5:len:2,cap:5
 	*/
+
+	a6 := a5[:]
+	a5[0] = 100
+
+	//[100 2]
+	fmt.Println(a6)
 
 }
