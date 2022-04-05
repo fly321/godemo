@@ -11,4 +11,7 @@ func main() {
 	fmt.Println(p)
 	fmt.Printf("%T\r\n", p)
 
+	m := *p
+	fmt.Println(m)
+
 }
