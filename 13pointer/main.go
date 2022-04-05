@@ -14,4 +14,9 @@ func main() {
 	m := *p
 	fmt.Println(m)
 
+	// new创建一个内存地址
+	a1 := new(int)
+	*a1 = 13
+	fmt.Println(*a1)
+
 }
