@@ -17,4 +17,14 @@ func main() {
 	} else {
 		fmt.Println(v)
 	}
+
+	// map遍历
+	for kk, vv := range m1 {
+		fmt.Println(kk, vv)
+	}
+
+	for _, vv := range m1 {
+		fmt.Println(vv)
+	}
+
 }
