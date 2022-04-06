@@ -27,4 +27,8 @@ func main() {
 		fmt.Println(vv)
 	}
 
+	// 删除key
+	delete(m1, "hehe")
+	fmt.Println(m1)
+
 }
