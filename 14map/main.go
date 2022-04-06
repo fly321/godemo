@@ -11,4 +11,10 @@ func main() {
 
 	fmt.Println(m1)
 
+	v, ok := m1["jhah"]
+	if !ok {
+		fmt.Println("key不存在")
+	} else {
+		fmt.Println(v)
+	}
 }
