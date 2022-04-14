@@ -6,6 +6,7 @@ func main() {
 	fmt.Println(sumxy(1, 2))
 	f3()
 	fmt.Println(f4())
+	fmt.Println(f5("xixi", 2, 3, 4, 5))
 }
 
 /**
@@ -20,6 +21,10 @@ func f3() {
 */
 func f4() int {
 	return 4
+}
+
+func f5(title string, y ...int) (string, []int) {
+	return title, y
 }
 
 func sumxy(x int, y int) (ret int) {
