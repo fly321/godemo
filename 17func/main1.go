@@ -15,6 +15,10 @@ func f33(x func() int) int {
 	return a
 }
 
+var f9 = func(x, y int) {
+	fmt.Println(x + y)
+}
+
 func main() {
 	a := f1
 	fmt.Printf("%T\r\n", a)
@@ -22,5 +26,7 @@ func main() {
 	fmt.Printf("%T\r\n", b)
 	c := f33(f2)
 	fmt.Println(c)
+
+	f9(100, 200)
 
 }
