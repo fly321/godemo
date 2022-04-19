@@ -29,16 +29,15 @@ func main() {
 
 	f9(100, 200)
 
-	ret := f99()
-	fmt.Println(ret(30))
+	ret := f99(200)
+	fmt.Println(ret(100))
 
 }
 
 /**
 函数闭包传值
 */
-func f99() func(int) int {
-	x := 100
+func f99(x int) func(int) int {
 	return func(i int) int {
 		return x + i
 	}
