@@ -29,4 +29,17 @@ func main() {
 
 	f9(100, 200)
 
+	ret := f99()
+	fmt.Println(ret(30))
+
+}
+
+/**
+函数闭包传值
+*/
+func f99() func(int) int {
+	x := 100
+	return func(i int) int {
+		return x + i
+	}
 }
