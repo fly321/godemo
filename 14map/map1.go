@@ -2,8 +2,8 @@ package main
 
 import "fmt"
 
-func sumFn(x ...int) int {
-	sum := 0
+func sumFn(x ...int) (sum int) {
+	sum = 0
 	for _, v := range x {
 		sum += v
 	}
