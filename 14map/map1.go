@@ -7,7 +7,7 @@ func sumFn(x ...int) (sum int) {
 	for _, v := range x {
 		sum += v
 	}
-	return sum
+	return
 }
 func main() {
 	num := sumFn(1, 2, 3, 4, 5, 6)
