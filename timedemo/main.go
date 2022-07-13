@@ -27,4 +27,12 @@ func main() {
 	unix := now.Unix()
 	fmt.Println(unix)
 
+	// 获取当前时间戳的纳秒
+	nanosecond := now.UnixNano()
+	fmt.Println(nanosecond)
+
+	// 获取当前日期对象
+	now1 := time.Unix(unix, 0)
+	fmt.Println(now1.Format("2006-01-02 15:04:05"))
+
 }
