@@ -23,4 +23,8 @@ func main() {
 	fmt.Println(format)
 	fmt.Println(format1)
 
+	// 获取当前时间戳
+	unix := now.Unix()
+	fmt.Println(unix)
+
 }
