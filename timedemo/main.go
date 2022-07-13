@@ -35,4 +35,14 @@ func main() {
 	now1 := time.Unix(unix, 0)
 	fmt.Println(now1.Format("2006-01-02 15:04:05"))
 
+	// 日期字符串 转时间戳
+	location, err := time.ParseInLocation("2006-01-02 15:04:05", "2019-01-01 00:00:00", time.Local)
+	if err != nil {
+		fmt.Println(err)
+	}
+	fmt.Println(location.Unix())
+
+	// 增加一小时
+	now2 := now.Add(time.Hour)
+	fmt.Println(now2.Format("2006-01-02 15:04:05"))
 }
