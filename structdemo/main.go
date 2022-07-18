@@ -26,4 +26,12 @@ func main() {
 	fmt.Printf("值：%v,类型:%T", p2, p2)
 	fmt.Printf("值：%#v,类型:%T", p2, p2)
 
+	// 第三种创建方式
+	var p3 = &Person{}
+	p3.age = 11
+	p3.name = "xhahsahd"
+	p3.sex = "嘟嘟"
+	fmt.Printf("值：%v,类型:%T", p3, p3)
+	fmt.Printf("值：%#v,类型:%T", p3, p3)
+
 }
