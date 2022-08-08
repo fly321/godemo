@@ -14,7 +14,7 @@ func main() {
 	// 获取管道里面的内容
 	a := <-ch
 	fmt.Println(a) // 10
-	<-ch
+	<-ch           //21
 	c := <-ch
 	fmt.Println(c) // 32
 }
