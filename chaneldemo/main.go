@@ -20,4 +20,5 @@ func main() {
 	ch <- 56
 	// 打印管道的长度容量
 	fmt.Printf("值：%#v,类型：%#T,容量: %v, 长度 %v", ch, ch, cap(ch), len(ch))
+	close(ch)
 }
