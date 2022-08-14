@@ -40,8 +40,8 @@ func main() {
 			fmt.Println(err)
 			return
 		}
-		fmt.Printf("读取了%d个字节\n", n)
-		strSlice = append(strSlice, temp1...)
+		//fmt.Printf("读取了%d个字节\n", n)
+		strSlice = append(strSlice, temp1[:n]...)
 	}
 
 	fmt.Println(string(strSlice))
