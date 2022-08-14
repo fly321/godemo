@@ -11,7 +11,7 @@ type Student1 struct {
 	Score int    `json:"score"`
 }
 
-func (s Student1) getInfo() string {
+func (s Student1) GetInfo() string {
 	str := fmt.Sprintf("姓名：%v,年龄:%v,积分:%v\n", s.Name, s.Age, s.Score)
 	return str
 }
@@ -28,6 +28,7 @@ func (s Student1) Print() {
 
 func PrintStructField(s interface{}) {
 	t := reflect.TypeOf(s)
+	v := reflect.ValueOf(s)
 
 	if t.Kind() != reflect.Struct && t.Elem().Kind() != reflect.Struct {
 		fmt.Println("传入的参数不是一个结构体")
@@ -39,6 +40,17 @@ func PrintStructField(s interface{}) {
 	fmt.Printf("字段名称：%v\n", field0.Name)
 	fmt.Printf("字段类型：%v\n", field0.Type)
 	fmt.Printf("字段tag:%v\n", field0.Tag.Get("json"))
+
+	field1, ok := t.FieldByName("Age")
+	if ok {
+		fmt.Printf("字段名称：%v\n", field1.Name)
+		fmt.Printf("字段类型：%v\n", field1.Type)
+		fmt.Printf("字段tag:%v\n", field1.Tag.Get("json"))
+	}
+
+	// 调用方法
+	info := v.MethodByName("GetInfo").Call(nil)
+	fmt.Println(info)
 
 }
 
