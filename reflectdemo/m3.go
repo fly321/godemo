@@ -35,20 +35,20 @@ func PrintStructField(s interface{}) {
 		return
 	}
 
-	/*field0 := t.Field(0)
+	field0 := t.Elem().Field(0)
 	fmt.Printf("%#v\n", field0)
 
 	fmt.Printf("字段名称：%v\n", field0.Name)
 	fmt.Printf("字段类型：%v\n", field0.Type)
 	fmt.Printf("字段tag:%v\n", field0.Tag.Get("json"))
 
-	field1, ok := t.FieldByName("Age")
+	field1, ok := t.Elem().FieldByName("Age")
 	if ok {
 		fmt.Printf("字段名称：%v\n", field1.Name)
 		fmt.Printf("字段类型：%v\n", field1.Type)
 		fmt.Printf("字段tag:%v\n", field1.Tag.Get("json"))
 	}
-	*/
+
 	// 调用方法
 	info := v.MethodByName("GetInfo").Call(nil)
 	fmt.Println(info)
