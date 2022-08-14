@@ -16,7 +16,7 @@ func (s Student1) GetInfo() string {
 	return str
 }
 
-func (s Student1) setInfo(name string, age, score int) {
+func (s *Student1) setInfo(name string, age, score int) {
 	s.Name = name
 	s.Age = age
 	s.Score = score
