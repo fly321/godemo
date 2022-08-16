@@ -13,6 +13,12 @@ func main() {
 		return
 	}
 
-	ioutil.WriteFile("./1.txt", byteStr, 0777)
+	err = ioutil.WriteFile("./1.txt", byteStr, 0777)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	fmt.Println("文件复制成功")
 
 }
