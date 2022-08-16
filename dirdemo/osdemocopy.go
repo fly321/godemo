@@ -32,9 +32,10 @@ func copyfile(srcFileName string, dstFileName string) (err error) {
 		if _, err := dstFile.Write(tempSlice[:n1]); err != nil {
 			return err
 		}
+
 	}
 
-	return
+	return nil
 }
 
 func main() {
